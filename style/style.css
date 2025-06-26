@@ -22,7 +22,6 @@ body{
     background-repeat: no-repeat;
 }
 #top::after {
-  content: none;
   bottom: 100vh;
   left: 0;
   right: 0;
