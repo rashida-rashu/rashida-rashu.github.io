@@ -97,7 +97,6 @@ nav ul li a:hover::after{
 /** about section **/
 
 #about-section{
-    background-image: url(../imgs/about.png);
     padding: 80px 0;
     color: #fff;
 }
