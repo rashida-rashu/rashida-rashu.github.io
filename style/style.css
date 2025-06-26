@@ -11,7 +11,7 @@ html{
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 body{
     background: #e7e3e3;
@@ -19,7 +19,7 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .fade-slide {
   opacity: 0;
