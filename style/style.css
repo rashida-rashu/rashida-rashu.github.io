@@ -21,17 +21,17 @@ body{
     padding: 0;
     overflow: hidden;
 }
-#main-scroll {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+.fade-slide {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
 }
 
-#main-scroll > div {
-  height: 100vh;
-  scroll-snap-align: start;
+.fade-slide.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
+
 #top{
     margin: 0;
     padding:  0;

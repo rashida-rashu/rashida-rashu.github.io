@@ -24,8 +24,7 @@
         <script src="https://kit.fontawesome.com/0764f7f2db.js" crossorigin="anonymous"></script>        
     </head>
     <body>
-        <div id="main-scroll">
-        <div id="top">
+        <div id="top" class="fade-slide">
             <div class="container">
                 <nav>
                     <h1 class="top-nav">Rashu</h1>
@@ -45,7 +44,7 @@
             </div>
         </div>
 
-        <div id="about-section">
+        <div id="about-section" class="fade-slide">
             <div class="container">
                 <div class="row">
                     <div class="col-2">
@@ -84,7 +83,7 @@
             </div>
         </div>     
 
-        <div id="Portfoilo">
+        <div id="Portfoilo" class="fade-slide">
             <div class="container">
                 <br>
                 <h1 class="sub-title">My Projects</h1>
@@ -126,7 +125,7 @@
             </div>
         </div>
 
-        <div id="contact">
+        <div id="contact" class="fade-slide">
             <div class="container">
                 <div class="row">
                     <div class="contact-left">
@@ -152,7 +151,23 @@
                 </div>
             </div>
         </div>
-        </div>
         <div class="b"><footer>Copyright © Rashida. Made With <i class="fa-brands fa-html5">   HTML</i>, <i class="fa-brands fa-css3-alt">   CSS</i> & <i class="fa-brands fa-square-js">   JavaScript</i>.</footer></div>
     </body>
 </html>
+<script>
+  const sections = document.querySelectorAll('.fade-slide');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
