@@ -9,19 +9,28 @@
 html{
     scroll-behavior: smooth;
     height: 100%;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 body{
     background: #e7e3e3;
     color: #fff;
     height: 100%;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
-section {
-  scroll-snap-align: start;
+#main-scroll {
   height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+#main-scroll > div {
+  height: 100vh;
+  scroll-snap-align: start;
 }
 #top{
     margin: 0;
