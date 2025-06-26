@@ -1,0 +1,344 @@
+/** Main Body **/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-sherif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#top{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgs/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.top-nav{
+    width: 140px;
+    font-size: 50px;
+    font-family: sans-serif;
+    background: linear-gradient(to right, rgba(255, 215, 255, 0) 0%, rgba(225, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0) 61%), linear-gradient(rgb(97, 183, 217) 52%, rgb(224, 246, 255) 60%, rgb(78, 99, 132) 61%);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    animation: wave 2000ms ease alternate infinite;
+    transition: all 0.4s ease;    
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    font-family: sans-serif;
+    background: linear-gradient(to right, rgba(216, 215, 255, 0) 0%, rgba(18, 179, 179, 0.5) 20%, rgba(230, 26, 26, 0) 61%), linear-gradient(rgb(62, 200, 255) 52%, rgb(33, 166, 6) 60%, rgb(78, 99, 132) 61%);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    animation: wave 2000ms ease alternate infinite;
+    transition: all 0.4s ease;        
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #bc22538d;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%
+}
+@keyframes wave{
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50vw 10px;
+    }
+}
+
+.container-text{
+    margin-top: 10%;
+    font-size: 30px;
+    text-align: center;
+}
+.container-text h1{
+    font-size: 35px;
+    margin-top: 20px; 
+}
+.container-text h1 span{
+    color: rgb(0, 183, 255);
+    font-family: "Lobster", "sans-serif";
+}
+
+
+/** about section **/
+
+#about-section{
+    padding: 80px 0;
+    color: #fff;
+}
+.row{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.para{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: larger;
+    font-style: normal;
+    color: #939393;
+}
+.tab-titles{
+    display: flex;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #ff004f;
+    font-size: 14px
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/*  ** PortFoilo  Section ** */
+#portfoilo{
+    padding: 30px 0;
+}
+.mpl{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.subtitle{
+    font-size: 30px;
+    color: #EE5808;
+}
+.git{
+    color: #EE5808;
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* footer */
+#contact{
+    padding: 0;
+}
+.sub-title{
+    text-align: left;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.cr{
+    flex-basis: 60%;
+    float: right;
+}
+.contact-left p{
+    margin: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.si{
+    margin-top: 30px;
+}
+.si a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.si a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #252525;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form button{
+    display: inline-block;
+    padding: 14px 60px;
+    font-size: 18px;
+    margin: 20px;
+    cursor: pointer;
+    background: #ff004f;
+    color: #fff;
+    border-radius: 12px;
+}
+.btn{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    padding: 14px 60px;
+    font-size: 18px;
+    margin: 20px;
+    cursor: pointer;
+    background: #ff004f;
+    color: #fff;
+    border-radius: 12px;
+}
+nav .fas{
+    display: none;
+}
+.b {
+    display: flex;
+    flex-direction: column;
+    min-height: 1vh;
+    width: 100%;
+    text-align: center;
+    padding: 1vh;
+    background: #262626;
+    font-weight: 300;
+}
+  
+footer {
+    margin-top: auto;
+}
+footer i {
+    color: #ff004f
+}
+#popup {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+
+@media only screen and (max-width: 600px){
+    .container-text{
+        margin-top: 50%;
+        font-size: 16px;
+        text-align: center;
+    }
+    .container-text p{
+        font-size: 50px;
+    }
+    .container-text h1{
+        font-size: 30px;
+    }
+    .container-text h1 span{
+        color: rgb(62, 200, 255);
+    }    
+    .sub-title{
+        font-size: 30px;
+    }
+    .subtitle{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background:rgb(0, 84, 120);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        margin: 40px;
+        justify-content: space-between;
+        display: block;
+    }
+    nav ul li a:hover::after{
+        width: 0px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}
