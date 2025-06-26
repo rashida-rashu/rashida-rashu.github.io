@@ -26,7 +26,7 @@ html{
    
 }
 body{
-    background: transparent;
+    background: hsl(180, 100%, 94%);
     color: #fff;
     height: auto;   
     margin: 0;   
