@@ -21,11 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const openBtn = document.querySelector('.fa-bars');
     const closeBtn = document.querySelector('.fa-times');
 
-    openBtn.addEventListener('click', function() {
+    function openmenu() {
         sidemenu.style.right = "0";
-    });
+    }
 
-    closeBtn.addEventListener('click', function() {
+    function closemenu() {
         sidemenu.style.right = "-200px";
-    });
+    }
+
+    openBtn.addEventListener('click', openmenu);
+    closeBtn.addEventListener('click', closemenu);
+
+    // If you still want them globally accessible (only needed if you use inline onclick)
+    window.openmenu = openmenu;
+    window.closemenu = closemenu;
 });
