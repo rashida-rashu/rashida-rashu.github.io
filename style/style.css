@@ -25,9 +25,9 @@
    
 } */
 html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth;
     overflow-x: hidden;
-    height: auto;
+    height: auto; */
 }
 
 body{
@@ -45,11 +45,12 @@ body{
     height: 100%;
 } */
 html, body {
-    overflow-x: hidden;   /* Prevent horizontal scroll */
-    overflow-y: hidden;   /* Hide default scroll to use custom slide scroll */
-    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden; /* ✅ enables touch scroll */
+    height: auto; /* ✅ supports dynamic content height */
     scroll-behavior: smooth;
-  }
+}
+
   
 
 /*   
