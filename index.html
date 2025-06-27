@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
         <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Micro+5+Charted&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
         <script src="scripts/about-section-hover.js"></script>
         <script src="scripts/sidemenu.js"></script>
         <script src="scripts/discord-popup.js"></script>
@@ -31,7 +32,7 @@
                     <ul class="sst" id="sidemenu">
                         <li ><i class="fa-solid fa-house"><a href="#header">   Home</a></i></li>
                         <li ><i class="fa-solid fa-address-card"><a href="#about-section">   About</a></i></li>
-                        <li ><i class="fa-solid fa-code"><a href="#Portfoilo">   Details</a></i></li>
+                        <li ><i class="fa-solid fa-code"><a href="#portfoilo">   Details</a></i></li>
                         <li ><i class="fa-solid fa-address-book"><a href="#contact">   Contact</a></i></li>
                         <i class="fas fa-times" onclick="closemenu()"></i>    
                     </ul>
@@ -39,22 +40,25 @@
                 </nav>
             </div>
             <div class="container-text">
-                <p style="font-family: Sofia, sans-serif; color: aquamarine;">Mst. Rashida Khatun</p>
-                <h1 style="font-family: Sofia, sans-serif;">Hello. I'm <span>Rashida.</span> <br> <h2 style="font-family: Sofia, sans-serif; font-size: larger; color: rgb(31, 227, 31);">I'm a <span style="font-family: VT323, monospace; color: red;">MBBS doctor</span> specialising in <span style="font-family: VT323, monospace; color: paleturquoise;">diabetes and public health.</span> :></h2></h1>
+                <p style="font-family: Borel, cursive, bold; color: rgb(153, 0, 255); font-size: larger;">Mst. Rashida Khatun</p>
+                <h1 style="font-family: Borel, cursive;">Greetings. I'm <span>Rashida.</span> <br> <h2 style="font-family: Borel, cursive; font-size: larger; color: rgb(31, 227, 31); text-align: center; position: relative; left: -8%; trasnform: trasnlateX(-50px);">An <span style="font-family: VT323, monospace; color: red;">MBBS doctor</span><br><span style="font-family: Borel, cursive; color: rgb(31, 227, 31); text-align: center; position: relative; left: 5%; trasnform: trasnlateX(-50px);">with a specialization on<br></span><span style="font-family: VT323, monospace; color: rgb(255, 42, 0);"> diabetes and public health.</span></h2></h1>
             </div>
         </div>
-
-        <div id="about-section" class="fade-slide">
+ 
+        <!-- <div id="about-section" class="fade-slide" style="background: url(imgs/about.png); background-position: center; background-size: cover;"> -->
+        <div id="about-section" class="fade-slide" style="background: url(imgs/about.png); background-position: center; background-size: cover; overflow: visible;">    
             <div class="container">
                 <div class="row">
-                    <div class="col-2">
-                        <h1 class="sub-title">About Me & My Expertise</h1>
-                        <p class="para">I'm Rashida.<br>I'm a doctor specializing in diabetes and public health.<br>I'm currently working as a Resident Medical Officer.<br>My expertise includes clinical practice in diabetes management and public health initiatives. I'm dedicated to improving community health outcomes.<br> My Skills And Experiences Are Given Below:</p>
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <div class="col-left">
+                        <h1 class="section-title">About Me & My Expertise</h1>
+                        <p class="intro-paragraph">I'm Rashida, a doctor specializing in diabetes and public health. I'm currently working as a Resident Medical Officer. My expertise includes clinical practice in diabetes management and public health initiatives. I'm dedicated to improving community health outcomes. My skills and experiences are detailed below:</p>
+    
+                        <div class="tab-navigation">
+                            <p class="tab-link active-tab-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-link" onclick="opentab('experience')">Experience</p>
                         </div>
-                        <div class="tab-contents active-tab" id="skills">
+    
+                        <div class="tab-content active-content" id="skills">
                             <ul>
                                 <li><span>Clinical Practice</span><br>Diabetes Management & Patient Care</li>
                                 <li><span>Public Health</span><br>Community Health Programs & Initiatives</li>
@@ -64,82 +68,73 @@
                                 <li><span>Preventive Medicine</span><br>Disease Prevention & Health Promotion</li>
                                 <li><span>Epidemiology</span><br>Disease Outbreak Investigation & Control</li>
                             </ul>
-                        </div>  
-                        <div class="tab-contents" id="experience">
+                        </div>
+    
+                        <div class="tab-content" id="experience">
                             <ul>
                                 <li><span>2019 - Current</span><br>Resident Medical Officer</li>
                                 <li><span>2020 - Current</span><br>Diabetes Specialist Clinic</li>
                                 <li><span>2020 - Current</span><br>Public Health Campaigns</li>
-                                <li><span>3rd March, 2022 - 30th March, 2022</span><br>Medical Research Assistant</li>
+                                <li><span>March 3, 2022 - March 30, 2022</span><br>Medical Research Assistant</li>
                                 <li><span>2022 - Current</span><br>Healthcare Policy Development</li>
                                 <li><span>2018 - Current</span><br>Community Health Worker</li>
                                 <li><span>2024 - Current</span><br>Medical Intern</li>
                                 <li><span>2022 - Current</span><br>Health Informatics Support</li>
                                 <li><span>2023 - Current</span><br>Medical Camp Organizer</li>
                             </ul>
-                        </div>                                    
+                        </div>
                     </div>
-                </div>                
+                </div>
             </div>
-        </div>     
-
-        <div id="Portfoilo" class="fade-slide" style="background-image: url(imgs/portfoilo.png); background-position: center; background-size: cover;">
+        </div>
+        <div id="portfoilo" class="fade-slide" style="background-image: url(imgs/portfoilo.png); background-position: center; background-size: cover;">
             <div class="container">
                 <br>
-                <h1 class="sub-title">My Projects</h1>
-                <p class="subtitle">Some Of My Major Projects Are Given Below! <span>For More Check Out My <a class="git" href="https://github.com/Raiyaad-Raad">Github</a> For More!</span></p>
+                <h1 class="sub-title">My Skills</h1>
                 <div class="mpl">
                     <div>
-                        <h2><span style="color: rgb(231, 47, 255)">Community</span><span style="color: #aa00ff">Health</span></h2>
-                        <strong style="color: #FFFFFF">This project focused on establishing community health clinics in underserved areas. It aimed to provide accessible healthcare services, including basic medical check-ups and health education.<br>We partnered with local organizations to reach a wider population.<br>The initiative included mobile health units and workshops on prevalent health issues.<br>The project has expanded and now includes specialized services for chronic disease management.</strong>
-                        <br>
-                        <a href="https://notexmc.net">Learn More At The Webiste.</a>
+                        <h2><span style="color: rgb(231, 47, 255)">Community</span><span style="color: #aa00ff"> Health</span></h2>
+                        <strong style="color: #1E5128">This project focused on establishing community health clinics in underserved areas. It aimed to provide accessible healthcare services, including basic medical check-ups and health education.<br>We partnered with local organizations to reach a wider population.<br>The initiative included mobile health units and workshops on prevalent health issues.<br>The project has expanded and now includes specialized services for chronic disease management.</strong>
                     </div>
                     <div>
-                        <h2 style="color:bisque">Diabetes Awareness Campaign</h2>
-                        <strong>A public health campaign designed to raise awareness about diabetes prevention and management.<br>This involved creating informational materials and organizing free screening camps.</b></strong>
-                        <br>
-                        <a href="https://github.com/Raiyaad-Raad/FriendsCord">Learn More</a>
+                        <h2 style="color:rgb(251, 188, 111)">Diabetes Awareness Campaign</h2>
+                        <strong style="color: #1E5128" >A public health campaign designed to raise awareness about diabetes prevention and management.<br>This involved creating informational materials and organizing free screening camps.</b></strong>
                     </div>
                     <div>
                         <h2 style="color:#607ad8">Public Health Informatics</h2>
-                        <strong>This project involved developing a system for tracking public health data.<br>It included collecting and analyzing health statistics to identify areas needing intervention.<br>The system helped in resource allocation and policy making. </strong>
+                        <strong style="color: #1E5128">This project involved developing a system for tracking public health data.<br>It included collecting and analyzing health statistics to identify areas needing intervention.<br>The system helped in resource allocation and policy making. </strong>
                         <br>
                     </div>
                     <div>
                         <h2 style="color:#7289da">Preventive Medicine Initiatives</h2>
-                        <strong>Please Note This Project is ongoing.<br>This initiative focuses on promoting healthy lifestyles to prevent non-communicable diseases.<br>It includes workshops on nutrition, exercise, and stress management.</strong>
-                        <a href="https://github.com/Raiyaad-Raad/PowerChat">Check Out The Details.</a>
+                        <strong style="color: #1E5128">Please Note This Project is ongoing.<br>This initiative focuses on promoting healthy lifestyles to prevent non-communicable diseases.<br>It includes workshops on nutrition, exercise, and stress management.</strong>
                     </div>
                     <div>
                         <h2 style="color:#2b3f86">Clinical Research on Diabetes</h2>
-                        <strong>Please Note This Project is ongoing.<br>This research project aims to study the effectiveness of new diabetes treatments.<br>It involves clinical trials and data analysis to contribute to medical knowledge.</strong>
-                        <a href="https://github.com/Raiyaad-Raad/Lonely-Bot">Check Out The Details.</a>
+                        <strong style="color: #1E5128">Please Note This Project is ongoing.<br>This research project aims to study the effectiveness of new diabetes treatments.<br>It involves clinical trials and data analysis to contribute to medical knowledge.</strong>
                     </div>
                     <div>
                         <h2 style="color:rgb(172, 11, 11)">Healthcare Accessibility Program</h2>
-                        <strong>Please Note This Project is ongoing.<br>This program works towards improving healthcare access for remote populations.<br>It involves setting up telemedicine facilities and mobile clinics.</strong>
-                        <a href="https://github.com/Raiyaad-Raad/MFPS">Check Out The Details.</a>
+                        <strong style="color: #1E5128">Please Note This Project is ongoing.<br>This program works towards improving healthcare access for remote populations.<br>It involves setting up telemedicine facilities and mobile clinics.</strong>
                     </div>                                                            
                 </div>
             </div>
         </div>
 
-        <div id="contact" class="fade-slide" style="background-image: url(imgs/contact.png); background-position: center; background-position: cover;">
+        <div id="contact" class="fade-slide" style="background-image: url(imgs/contact.png); background-position: center; background-size: cover;">
             <div class="container">
                 <div class="row">
                     <div class="contact-left">
                         <h1 class="sub-title">Contact Me</h1>
-                        <p><i class="fas fa-paper-plane"></i>raiyaad.raad@hotmail.com</p>
+                        <p><i class="fas fa-paper-plane"></i>dr.rashida0915@gmail.com</p>
                         <div class="si">
-                            <a href="https://www.facebook.com/profile.php?id=100094414757125"><i class="fab fa-facebook"></i></a>
-                            <a href="https://github.com/Raiyaad-Raad"><i class="fa-brands fa-github"></i></a>
-                            <a href="#" id="discord-link"><i class="fa-brands fa-discord"></i></a>
-                            <a href="https://twitter.com/twily_vivi"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.instagram.com/twily_vivi/"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/elina.elina.435269"><i class="fab fa-facebook"></i></a>
                         </div>
-                        <a href="imgs/Raiyaad's Resume.pdf" download class="btn">Download CV</a>
                     </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <div class="cr" style="float: right;">
                         <form name="submit-to-google-sheet" class="cr" style="float: right;">
                             <input type="text" name="Name" placeholder="Your Name" required>
@@ -156,63 +151,42 @@
 </html>
 
 <script>
-    const slides = document.querySelectorAll('.fade-slide');
-  let currentIndex = 0;
-  let isScrolling = false;
-
- function scrollToSlide(index) {
-  if (index < 0 || index >= slides.length) return;
-  isScrolling = true;
-
-  // remove active class from all
-  slides.forEach(slide => slide.classList.remove('active'));
-
-  // add active to current
-  slides[index].classList.add('active');
-
-  slides[index].scrollIntoView({ behavior: 'smooth' });
-  currentIndex = index;
-
-  setTimeout(() => isScrolling = false, 1000);
-}
-
-
-// Initialize first visible slide
-slides[0].classList.add('active');
-
-
-  window.addEventListener('wheel', (e) => {
-    if (isScrolling) return;
-    if (e.deltaY > 0) {
-      scrollToSlide(currentIndex + 1);
-    } else {
-      scrollToSlide(currentIndex - 1);
-    }
-  }, { passive: true });
-  window.addEventListener('keydown', (e) => {
-  if (isScrolling) return;
-  if (e.key === 'ArrowDown') {
-    scrollToSlide(currentIndex + 1);
-  } else if (e.key === 'ArrowUp') {
-    scrollToSlide(currentIndex - 1);
-  }
-});
-
-
-  // Optional: Touch support
-  let startY = 0;
-
-  window.addEventListener('touchstart', (e) => {
-    startY = e.touches[0].clientY;
-  });
-
-  window.addEventListener('touchend', (e) => {
-    const endY = e.changedTouches[0].clientY;
-    if (isScrolling) return;
-    if (startY - endY > 50) {
-      scrollToSlide(currentIndex + 1);
-    } else if (endY - startY > 50) {
-      scrollToSlide(currentIndex - 1);
-    }
-  });
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.fade-slide');
+      let currentIndex = 0;
+      let isScrolling = false;
+    
+      function scrollToSlide(index) {
+        if (index < 0 || index >= slides.length) return;
+        isScrolling = true;
+    
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+        slides[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        currentIndex = index;
+    
+        setTimeout(() => isScrolling = false, 1000);
+      }
+    
+      slides[0].classList.add('active');
+    
+      window.addEventListener('wheel', (e) => {
+        if (isScrolling) return;
+        if (e.deltaY > 0) {
+          scrollToSlide(currentIndex + 1);
+        } else {
+          scrollToSlide(currentIndex - 1);
+        }
+      }, { passive: true });
+    
+      window.addEventListener('keydown', (e) => {
+        if (isScrolling) return;
+        if (e.key === 'ArrowDown') {
+          scrollToSlide(currentIndex + 1);
+        } else if (e.key === 'ArrowUp') {
+          scrollToSlide(currentIndex - 1);
+        }
+      });
+    });
 </script>
+    
