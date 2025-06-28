@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rashida's Portfolio</title>
+        <meta content="Rashida's Portfolio" property="og:title" />
+        <meta content="Mst. Rashida Khatun, a fellow doctor specialising in diabetes and public health. Currently in a resident medical officer postion" property="og:description" />
+        <meta content="https://raiyaad-raad.is-a.dev" property="og:url" />
+        <meta content="https://github.com/Raiyaad-Raad/Raiyaad-Raad.github.io/blob/main/imgs/IMG_1846.png?raw=true" property="og:image" />
+        <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+        <link rel="icon" href="imgs/icon.png" type="image/icon type">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Micro+5+Charted&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+        <script src="scripts/about-section-hover.js"></script>
+        <script src="scripts/sidemenu.js"></script>
+        <script src="scripts/contact-form-responsive.js"></script>
+        <script src="https://kit.fontawesome.com/0764f7f2db.js" crossorigin="anonymous"></script>    
+        <script>
+            function openmenu(){
+              document.getElementById("sidemenu").style.right = "0";
+            }
+            function closemenu(){
+              document.getElementById("sidemenu").style.right = "-200px";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="top" class="fade-slide">
+            <div class="container">
+                <nav>
+                    <h1 class="top-nav">Rashu</h1>
+                    <ul class="sst" id="sidemenu">
+                        <li><i class="fa-solid fa-house"><a href="#top"> Home</a></i></li>
+                        <li><i class="fa-solid fa-address-card"><a href="#about-section"> About</a></i></li>
+                        <li><i class="fa-solid fa-briefcase"><a href="#portfoilo"> Portfolio</a></i></li>
+                        <li><i class="fa-solid fa-address-book"><a href="#contact"> Contact</a></i></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>    
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+            </div>
+            <div class="container-text">
+                <p style="font-family: Borel, cursive; color: rgb(153, 0, 255); font-size: larger;">Mst. Rashida Khatun</p>
+                <h1 style="font-family: Borel, cursive;">Greetings. I'm <span>Rashida.</span> <br> <h2 style="font-family: Borel, cursive; font-size: 30px; color: rgb(31, 227, 31); text-align: center; position: relative; /* Removed transform here, relying on flexbox */">An <span style="font-family: VT323, monospace; color: red;">MBBS doctor</span><br><span style="font-family: Borel, cursive; color: rgb(31, 227, 31); text-align: center; position: relative; left: 5%; /* Removed transform here, relying on flexbox */">with a specialization on<br></span><span style="font-family: VT323, monospace; color: rgb(255, 42, 0);"> diabetes and public health.</span></h2></h1>
+            </div>
+        </div>
+
+        <div id="about-section" class="fade-slide" style="background: url(imgs/about.png); background-position: center; background-size: cover; overflow: visible;">    
+            <div class="container">
+                <div class="row">
+                    <div class="col-left">
+                        <h1 class="section-title">About Me & My Expertise</h1>
+                        <p class="intro-paragraph">I'm Rashida, a doctor. My expertise includes clinical practice in diabetes management and paediatric initiatives.</p>
+                        <div class="tab-navigation">
+                            <p class="tab-link active-tab-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-link" onclick="opentab('experience')">Experience</p>
+                        </div>
+    
+                        <div class="tab-content active-content" id="skills">
+                            <ul>
+                                <li><span>MBBS Course</span><br>Bachelor of Medicine & Surgery</li>
+                                <li><span>Paediatric</span><br>Children in Medicine</li>
+                                <li><span>Masters in Public Health</span><br>Community Medicine</li>
+                                <li><span>m.Ph Research</span><br>CPR Process</li>
+                                <li><span>CCD</span><br>Certified Course on Diabetes</li>
+                            </ul>
+                        </div>
+    
+                        <div class="tab-content" id="experience">
+                            <ul>
+                                <li><span>Coming Soon</span><br>Coming Soon</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="portfoilo" class="fade-slide" style="background-image: url(imgs/portfoilo.png); background-position: center; background-size: cover;">
+            <div class="container">
+                <br>
+                <h1 class="sub-title">My Skills</h1>
+                <div class="mpl">
+                    <div>
+                        <h2><span style="color: #E72FFF;">MBBS - Bachelor Of Medicine & Surgery</span></h2>
+                        <p>The MBBS program provided a comprehensive and rigorous foundation in medical science and clinical practice. This intensive five-year undergraduate degree, followed by a mandatory one-year rotatory internship, equipped me with in-depth knowledge across diverse medical disciplines and invaluable hands-on experience in patient care.</p>
+                    </div>
+                    <div>
+                        <h2 style="color:#FBBC6F;">CCD - Certified Course on Diabetes</h2>
+                        <p>The Certified Course on Diabetes (CCD), undertaken through the Diabetic Association of Bangladesh (BADAS), significantly advanced my expertise in the comprehensive diagnosis, treatment, and long-term management of diabetes mellitus. This specialized training equipped me with evidence-based strategies for patient care, lifestyle modification, pharmacotherapy, and complication prevention, enabling me to provide enhanced and holistic care to diabetic patients.</p>
+                    </div>
+                    <div>
+                        <h2 style="color:#607AD8;">MPH - Masters in Public Health</h2>
+                        <p>The Master of Public Health (MPH) program was instrumental in developing my expertise in epidemiology, biostatistics, health policy, and public health administration. This interdisciplinary training equipped me with critical skills in data analysis, research methodology, program planning, and leadership, essential for identifying and addressing public health priorities and designing effective health interventions at scale.</p>
+                    </div>
+                    <div>
+                        <h2 style="color:#E9C63D;">Paediatric - Children in Medicine</h2>
+                        <p>My engagement with Paediatrics reflects my commitment to continuous learning in this evolving field. Recognizing the distinct challenges in caring for the pediatric population, I focus on staying updated with the latest guidelines in pediatric care, child development, and the prevention and management of childhood diseases to provide the highest standard of care to my young patients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact" style="background-image: url(imgs/contact.png); background-position: center; background-size: cover;">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fas fa-paper-plane"></i>dr.rashida0915@gmail.com</p>
+                        <div class="si">
+                            <a href="https://www.facebook.com/elina.elina.435269"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                    <div class="cr" style="float: right;">
+                        <form name="submit-to-google-sheet" class="cr" style="float: right;">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b"><footer>Copyright © Rashida. Made With <i class="fa-brands fa-html5"> HTML</i>, <i class="fa-brands fa-css3-alt"> CSS</i> & <i class="fa-brands fa-square-js"> JavaScript</i>.</footer></div>
+    </body>
+</html>

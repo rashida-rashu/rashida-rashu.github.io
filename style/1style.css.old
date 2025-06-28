@@ -1,0 +1,555 @@
+/* Main Body */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  height: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: hsl(180, 19%, 88%);
+  color: #333; /* Changed default body text color to a dark gray for better readability across various elements if not explicitly set */
+}
+
+/* Top Section */
+#top {
+  width: 100%;
+  background-image: url(../imgs/bg.png); /* This should match image_755e19.jpg */
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0 100px 0; /* Increased bottom padding for homepage ending space */
+  min-height: 100vh;      /* Ensure it takes at least the full viewport height */
+  display: flex;          /* Use flexbox to align content vertically */
+  flex-direction: column; /* Stack children (nav and container-text) vertically */
+}
+
+.container {
+  padding: 10px 10%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 20px; /* Add some padding to push nav down from very top of viewport */
+}
+
+.top-nav {
+  width: 140px;
+  font-size: 40px;
+  font-family: sans-serif;
+  background: linear-gradient(to right, rgba(255, 215, 255, 0) 0%, rgba(225, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0) 61%), linear-gradient(rgb(97, 183, 217) 52%, rgb(224, 246, 255) 60%, rgb(78, 99, 132) 61%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: wave 2000ms ease alternate infinite;
+  transition: all 0.4s ease;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  font-family: sans-serif;
+  background: linear-gradient(to right, rgb(183, 114, 239) 0%, rgba(95, 237, 237, 0.5) 20%, rgb(30, 159, 246) 61%), linear-gradient(rgb(62, 200, 255) 52%, rgb(33, 166, 6) 60%, rgb(78, 99, 132) 61%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: wave 2000ms ease alternate infinite;
+  transition: all 0.4s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #bc22538d;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+@keyframes wave {
+  0% { background-position: 0 0; }
+  100% { background-position: 50vw 10px; }
+}
+
+.container-text {
+  margin-top: 50px; /* Adjusted margin-top to position the text block lower than nav but not too far */
+  flex-grow: 1; /* Allows it to take up remaining vertical space below nav */
+  display: flex; /* Use flexbox for its internal content as well */
+  flex-direction: column;
+  justify-content: center; /* Vertically center text within container-text */
+  align-items: center; /* Horizontally center text within container-text (for the block itself) */
+  text-align: center; /* Keep text-align center */
+  padding-bottom: 50px; /* Add some padding at the bottom of the text container */
+}
+
+.container-text p { /* Mst. Rashida Khatun */
+  font-size: 1.8em; /* Slightly larger for prominence */
+  color: #4F4F4F; /* Darker gray for better readability */
+  font-weight: 600; /* Make it bold */
+  margin-bottom: 10px; /* Space below this line */
+}
+
+.container-text h1 { /* Greetings. I'm Rashida. */
+  font-size: 3.5em; /* Significantly larger for main greeting */
+  margin-top: 0; /* Remove extra margin */
+  color: #333; /* Darker gray for better readability */
+}
+
+.container-text h1 span { /* Rashida. (inside h1) */
+  color: #007bff; /* A professional blue that stands out on light background */
+  font-family: "Lobster", "sans-serif";
+}
+
+.container-text h2 { /* An MBBS doctor with a specialization on diabetes and public health. */
+  font-size: 1.8em; /* Increased size for better prominence */
+  color: #555; /* Darker gray for readability */
+  text-align: center; /* THIS ENSURES THE TEXT CONTENT IS CENTERED */
+  margin-top: 20px; /* Space above h2 */
+  margin-left: auto; /* Centers the block itself horizontally */
+  margin-right: auto; /* Centers the block itself horizontally */
+  line-height: 1.5; /* Improved line spacing for readability */
+  max-width: 60%; /* Limit width to prevent text from stretching too wide, helps visual centering */
+  transform: none; /* Safeguard against any inherited transforms */
+}
+
+.container-text h2 span { /* MBBS doctor, diabetes and public health (inside h2) */
+  font-family: 'VT323', monospace; /* Keep distinct font */
+  color: #007bff; /* Use the same professional blue for highlighted text */
+  font-weight: bold; /* Make it bold for emphasis */
+}
+
+
+/* About Section */
+#about-section {
+  background-image: url('imgs/about.png');
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0; /* Increased top and bottom padding */
+  min-height: 80vh; /* Ensure a decent minimum height for the section */
+  display: flex; /* Use flexbox for aligning content inside */
+  align-items: center; /* Vertically center the content (the .row) */
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%; /* Ensure row takes full width of container */
+}
+
+.col-left {
+  flex-basis: 50%;
+  max-width: 50%;
+  padding-right: 30px;
+  box-sizing: border-box;
+  color: #fff; /* Existing color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Existing shadow for readability */
+  padding-top: 20px; /* Add some internal padding to the content column */
+  padding-bottom: 20px;
+}
+
+.section-title {
+  font-family: 'Merriweather', serif;
+  font-size: 3.5em;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #E0E0E0;
+}
+
+.intro-paragraph {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #1A2E44; /* Darker color for readability against lighter part of background */
+}
+
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+}
+
+.tab-link {
+  margin-right: 60px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 10px;
+  color: #ff111182; /* This color might still be hard to read on lighter parts of the bg */
+  transition: color 0.3s ease;
+}
+
+.tab-link:hover {
+  color: #FFFFFF;
+}
+
+.tab-link::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #FF5722;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tab-link.active-tab-link {
+  color: #FFFFFF;
+}
+
+.tab-link.active-tab-link::after {
+  width: 100%;
+}
+
+
+/* Tab Contents */
+.tab-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-content ul li {
+  margin: 15px 0;
+  font-size: 15px;
+  color: #E0E0E0; /* Ensure this is readable, consider a slightly darker grey like #D0D0D0 if needed */
+}
+
+.tab-content ul li span {
+  color: #FF8A65;
+  font-weight: 600;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.tab-content.active-content {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Portfolio Section */
+#portfoilo{
+  padding: 120px 0; /* Increased top and bottom padding */
+  background-image: url(imgs/portfoilo.png);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh; /* Make sure it takes at least the full viewport height if content is short */
+  display: flex;          /* Use flexbox to center content vertically */
+  flex-direction: column; /* Arrange content in a column */
+  justify-content: center; /* Vertically center content */
+}
+.mpl{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px 0; /* Example: add some vertical padding to the grid container */
+}
+.mpl > div {
+  padding: 20px; /* Add internal padding to each individual skill block */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background for readability */
+  border-radius: 10px; /* Slightly rounded corners for aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  color: #F0F0F0; /* Light text color for readability over dark background */
+}
+.mpl > div h2 {
+  margin-bottom: 15px; /* Spacing below headings */
+}
+.mpl > div p { /* Target the descriptions directly using 'p' now */
+  line-height: 1.6;
+  color: #D0D0D0; /* Slightly different shade for body text */
+}
+
+.sub-title{
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+.subtitle{ /* This class seems unused, can be removed if not needed */
+  font-size: 30px;
+  color: #EE5808;
+}
+.git{ /* This class seems unused, can be removed if not needed */
+  color: #EE5808;
+  display: inline-block;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Contact Section */
+#contact {
+  padding: 120px 0; /* Increased top and bottom padding */
+  background-image: url(imgs/contact.png);
+  background-position: center;
+  background-size: cover;
+  min-height: 80vh; /* Ensure a decent minimum height for the section */
+  display: flex; /* Use flexbox for aligning content inside */
+  align-items: center; /* Vertically center the content (the .row) */
+}
+
+.contact-left {
+  flex-basis: 35%;
+}
+
+.cr {
+  flex-basis: 60%;
+  float: right; /* Keep float for now, but flexbox is usually better for layout */
+}
+
+.contact-left p {
+  margin: 30px 0; /* Adjust margin for paragraphs */
+  color: #fff; /* Ensure text is readable */
+}
+
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.si {
+  margin-top: 30px;
+}
+
+.si a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.si a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+
+form input, form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #252525;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+form button, .btn {
+  display: inline-block;
+  padding: 14px 60px;
+  font-size: 18px;
+  margin: 20px 0 0 0; /* Adjust margin-left for button */
+  cursor: pointer;
+  background: #ff004f;
+  color: #fff;
+  border-radius: 12px;
+  border: none; /* Ensure no default button border */
+}
+
+/* Footer */
+.b {
+  display: flex;
+  flex-direction: column;
+  min-height: 7vh; /* Give it a minimum height to not feel cramped */
+  width: 100%;
+  text-align: center;
+  padding: 0.5vh; /* Keep some padding */
+  background: #262626;
+  font-weight: 300;
+  color: #e7faf9; /* Ensure footer text is readable */
+}
+
+footer {
+  margin-top: auto; /* Keeps footer at bottom if parent is flex column */
+  padding: 10px 0; /* Add internal padding to footer text */
+  color: #E0E0E0; /* Specific color for footer text */
+  font-size: 0.9em; /* Optionally make the text slightly smaller */
+}
+
+footer i {
+  color: #ff004f;
+}
+
+/* Side Menu Toggle Icons - Hidden by default on desktop */
+nav .fas {
+  display: none; /* Hide icons on larger screens by default */
+}
+
+/* --- Responsive Design --- */
+@media only screen and (max-width: 600px) {
+  /* Top Section */
+  #top {
+      padding: 20px 0 450px 0; /* Increased bottom padding for mobile */
+      min-height: unset; /* Let content dictate height on mobile */
+  }
+  .container-text {
+      margin-top: 30px; /* Adjust margin-top for mobile */
+      padding-top: 165px;
+      text-align: center;
+  }
+
+  .container-text p {
+      font-size: 1.2em; /* Smaller on mobile */
+  }
+
+  .container-text h1 {
+      font-size: 2.2em; /* Smaller on mobile */
+  }
+
+  .container-text h2 {
+      font-size: 1.2em; /* Adjusted smaller for mobile */
+      max-width: 90%; /* Allow it to take more width on small screens */
+      margin: 15px auto 0 auto; /* Ensure centering on mobile */
+  }
+  .container-text h1 span, .container-text h2 span {
+      font-size: 1em; /* Maintain relative sizing for spans */
+  }
+
+  /* About Section */
+  #about-section, #portfoilo, #contact {
+      padding: 100px 0 100px 0; /* Increased top and bottom padding for mobile */
+      min-height: unset; /* Let content dictate height on mobile */
+  }
+
+  .col-left {
+      flex-basis: 100%; /* Make about section content full width on mobile */
+      max-width: 100%;
+      padding-right: 0; /* Remove right padding on mobile */
+      padding-bottom: 30px; /* Add some space below the text */
+  }
+
+  .row {
+      flex-direction: column; /* Stack columns vertically on mobile */
+      align-items: center; /* Center items when stacked */
+  }
+  .section-title {
+      font-size: 2em; /* Adjust title size for mobile */
+      text-align: center; /* Center title on mobile */
+  }
+  .intro-paragraph {
+      text-align: center; /* Center intro paragraph on mobile */
+  }
+  .tab-navigation {
+      justify-content: center; /* Center tab links on mobile */
+  }
+  .tab-link {
+      margin-right: 30px;
+  }
+  .tab-content ul li {
+      text-align: center;
+  }
+  .tab-content ul li span {
+      text-align: center;
+  }
+
+
+  /* Portfolio Section */
+  .mpl {
+      grid-template-columns: 1fr; /* Stack portfolio items on mobile */
+  }
+  .mpl > div {
+      margin-left: 10%; /* Add horizontal padding on mobile */
+      margin-right: 10%;
+  }
+  .sub-title { /* For "My Skills" and "Contact Me" */
+      font-size: 40px;
+  }
+
+  /* Contact Section */
+  .contact-left, .cr {
+      flex-basis: 100%; /* Make contact columns full width on mobile */
+      padding: 10px; /* Smaller internal padding on mobile */
+      float: none; /* Remove float for better stacking with flexbox on mobile */
+  }
+  .contact-left h1 {
+      text-align: center;
+  }
+  .contact-left p {
+      text-align: center;
+  }
+  .contact-left p i {
+      margin-right: 5px; /* Adjust icon spacing */
+  }
+  .si {
+      text-align: center; /* Center social icons */
+  }
+  form button, .btn {
+      margin: 20px auto; /* Center button on mobile */
+      display: block; /* Make button take full width */
+  }
+
+
+  /* Side Menu Toggle Icons - Displayed only on mobile */
+  nav .fas {
+      display: block; /* Show icons on smaller screens */
+      font-size: 25px;
+      color: #fff; /* Ensure hamburger icon is visible */
+  }
+
+  nav ul {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -200px;
+      width: 200px;
+      height: 100vh;
+      padding-top: 50px;
+      background: rgb(0, 84, 120);
+      z-index: 2;
+      transition: right 0.5s;
+  }
+
+  nav ul li {
+      margin: 40px;
+      display: block;
+  }
+
+  nav ul .fas {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      cursor: pointer;
+      color: #fff; /* Ensure close icon is visible */
+  }
+}
