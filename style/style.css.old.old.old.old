@@ -14,19 +14,20 @@ html, body {
 
 body {
   background: hsl(180, 19%, 88%);
-  color: #333; /* Changed default body text color to a dark gray for better readability across various elements if not explicitly set */
+  color: #e7faf9; /* Default text color for elements not otherwise specified */
 }
 
 /* Top Section */
 #top {
   width: 100%;
-  background-image: url(../imgs/bg.png); /* This should match image_755e19.jpg */
+  background-image: url(../imgs/bg.png);
   background-size: cover;
   background-position: center;
-  padding: 20px 0 100px 0; /* Increased bottom padding for homepage ending space */
+  padding: 100px 0 80px 0; /* Add generous top and bottom padding */
   min-height: 100vh;      /* Ensure it takes at least the full viewport height */
-  display: flex;          /* Use flexbox to align content vertically */
-  flex-direction: column; /* Stack children (nav and container-text) vertically */
+  display: flex;          /* Use flexbox to center content vertically */
+  flex-direction: column; /* Arrange content in a column */
+  justify-content: center; /* Vertically center content */
 }
 
 .container {
@@ -38,7 +39,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 20px; /* Add some padding to push nav down from very top of viewport */
 }
 
 .top-nav {
@@ -97,59 +97,31 @@ nav ul li a:hover::after {
 }
 
 .container-text {
-  margin-top: 50px; /* Adjusted margin-top to position the text block lower than nav but not too far */
-  flex-grow: 1; /* Allows it to take up remaining vertical space below nav */
+  margin-top: 0; /* Override previous margin-top from index.html if it's there */
+  flex-grow: 1; /* Allow this container to take up available vertical space */
   display: flex; /* Use flexbox for its internal content as well */
   flex-direction: column;
   justify-content: center; /* Vertically center text within container-text */
-  align-items: center; /* Horizontally center text within container-text (for the block itself) */
+  align-items: center; /* Horizontally center text within container-text */
   text-align: center; /* Keep text-align center */
-  padding-bottom: 50px; /* Add some padding at the bottom of the text container */
 }
 
-.container-text p { /* Mst. Rashida Khatun */
-  font-size: 1.8em; /* Slightly larger for prominence */
-  color: #4F4F4F; /* Darker gray for better readability */
-  font-weight: 600; /* Make it bold */
-  margin-bottom: 10px; /* Space below this line */
+.container-text h1 {
+  font-size: 35px;
+  margin-top: 20px;
 }
 
-.container-text h1 { /* Greetings. I'm Rashida. */
-  font-size: 3.5em; /* Significantly larger for main greeting */
-  margin-top: 0; /* Remove extra margin */
-  color: #333; /* Darker gray for better readability */
-}
-
-.container-text h1 span { /* Rashida. (inside h1) */
-  color: #007bff; /* A professional blue that stands out on light background */
+.container-text h1 span {
+  color: rgb(0, 183, 255);
   font-family: "Lobster", "sans-serif";
 }
-
-.container-text h2 { /* An MBBS doctor with a specialization on diabetes and public health. */
-  font-size: 1.8em; /* Increased size for better prominence */
-  color: #555; /* Darker gray for readability */
-  text-align: center; /* THIS ENSURES THE TEXT CONTENT IS CENTERED */
-  margin-top: 20px; /* Space above h2 */
-  margin-left: auto; /* Centers the block itself horizontally */
-  margin-right: auto; /* Centers the block itself horizontally */
-  line-height: 1.5; /* Improved line spacing for readability */
-  max-width: 60%; /* Limit width to prevent text from stretching too wide, helps visual centering */
-  transform: none; /* Safeguard against any inherited transforms */
-}
-
-.container-text h2 span { /* MBBS doctor, diabetes and public health (inside h2) */
-  font-family: 'VT323', monospace; /* Keep distinct font */
-  color: #007bff; /* Use the same professional blue for highlighted text */
-  font-weight: bold; /* Make it bold for emphasis */
-}
-
 
 /* About Section */
 #about-section {
   background-image: url('imgs/about.png');
   background-size: cover;
   background-position: center;
-  padding: 120px 0; /* Increased top and bottom padding */
+  padding: 100px 0; /* Add generous top and bottom padding for vertical space */
   min-height: 80vh; /* Ensure a decent minimum height for the section */
   display: flex; /* Use flexbox for aligning content inside */
   align-items: center; /* Vertically center the content (the .row) */
@@ -265,7 +237,7 @@ nav ul li a:hover::after {
 
 /* Portfolio Section */
 #portfoilo{
-  padding: 120px 0; /* Increased top and bottom padding */
+  padding: 80px 0; /* Adjusted padding for top and bottom */
   background-image: url(imgs/portfoilo.png);
   background-position: center;
   background-size: cover;
@@ -316,7 +288,7 @@ nav ul li a:hover::after {
 
 /* Contact Section */
 #contact {
-  padding: 120px 0; /* Increased top and bottom padding */
+  padding: 80px 0; /* Adjusted padding for top and bottom */
   background-image: url(imgs/contact.png);
   background-position: center;
   background-size: cover;
@@ -391,10 +363,10 @@ form button, .btn {
 .b {
   display: flex;
   flex-direction: column;
-  min-height: 7vh; /* Give it a minimum height to not feel cramped */
+  min-height: 10vh; /* Give it a minimum height to not feel cramped */
   width: 100%;
   text-align: center;
-  padding: 0.5vh; /* Keep some padding */
+  padding: 1vh; /* Keep some padding */
   background: #262626;
   font-weight: 300;
   color: #e7faf9; /* Ensure footer text is readable */
@@ -402,45 +374,35 @@ form button, .btn {
 
 footer {
   margin-top: auto; /* Keeps footer at bottom if parent is flex column */
-  padding: 10px 0; /* Add internal padding to footer text */
+  padding: 20px 0; /* Add internal padding to footer text */
   color: #E0E0E0; /* Specific color for footer text */
-  font-size: 0.9em; /* Optionally make the text slightly smaller */
 }
 
 footer i {
   color: #ff004f;
 }
 
-/* Side Menu Toggle Icons - Hidden by default on desktop */
-nav .fas {
-  display: none; /* Hide icons on larger screens by default */
-}
 
 /* --- Responsive Design --- */
 @media only screen and (max-width: 600px) {
   /* Top Section */
   #top {
-      padding: 20px 0 450px 0; /* Increased bottom padding for mobile */
-      min-height: unset; /* Let content dictate height on mobile */
+      padding: 50px 0; /* Reduce padding for mobile screens */
+      min-height: unset; /* Let content dictate height on mobile for #top */
   }
   .container-text {
-      margin-top: 30px; /* Adjust margin-top for mobile */
-      padding-top: 165px;
-      text-align: center;
+      margin-top: 15%; /* Keep some top margin for spacing on mobile */
+      /* Adjust font sizes for mobile for better readability and fit */
+      font-size: 16px;
   }
-
   .container-text p {
-      font-size: 1.2em; /* Smaller on mobile */
+      font-size: 1.5em; /* Adjust as needed */
   }
-
   .container-text h1 {
-      font-size: 2.2em; /* Smaller on mobile */
+      font-size: 1.5em; /* Adjust as needed */
   }
-
   .container-text h2 {
-      font-size: 1.2em; /* Adjusted smaller for mobile */
-      max-width: 90%; /* Allow it to take more width on small screens */
-      margin: 15px auto 0 auto; /* Ensure centering on mobile */
+      font-size: 1em; /* Adjust as needed */
   }
   .container-text h1 span, .container-text h2 span {
       font-size: 1em; /* Maintain relative sizing for spans */
@@ -448,7 +410,7 @@ nav .fas {
 
   /* About Section */
   #about-section, #portfoilo, #contact {
-      padding: 100px 0 100px 0; /* Increased top and bottom padding for mobile */
+      padding: 50px 0; /* Consistent reduced padding for main sections on mobile */
       min-height: unset; /* Let content dictate height on mobile */
   }
 
@@ -520,9 +482,9 @@ nav .fas {
   }
 
 
-  /* Side Menu Toggle Icons - Displayed only on mobile */
+  /* Side Menu Toggle Icons */
   nav .fas {
-      display: block; /* Show icons on smaller screens */
+      display: block;
       font-size: 25px;
       color: #fff; /* Ensure hamburger icon is visible */
   }
